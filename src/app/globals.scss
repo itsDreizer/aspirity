@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --bg-main: #141414;
+  --btn-primary: #0047bb;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -16,14 +18,23 @@
   }
 }
 
+.container {
+  max-width: 1470px;
+  padding: 0px 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(225, 227, 230);
+  background: var(--bg-main);
+}
+
+h5 {
+  @apply text-2xl;
 }
 
 @layer utilities {
