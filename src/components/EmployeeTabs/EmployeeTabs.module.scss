@@ -1,4 +1,18 @@
+.tabs-root {
+  @apply mx-auto md:mx-0  max-w-[500px] border-b mt-[3.25rem];
+
+  [class^="MuiTabs-scroller"] {
+    overflow: auto !important;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
 .tab-root {
+  @apply text-sm;
+
   font-weight: 700;
   color: rgb(176, 177, 182);
   &.tab-selected {
@@ -12,4 +26,3 @@
 
 .tab-selected {
 }
-

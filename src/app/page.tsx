@@ -44,7 +44,7 @@ const Home: React.FC<IHomeProps> = (props) => {
   return (
     <div className="container mt-4 mb-[100px]">
       <BackToStuff className="ml-4" />
-      <div className="bg-bgSecondary rounded-xl px-10 pt-10 pb-5 mt-3">
+      <div className=" bg-bgSecondary rounded-xl pl-4 pr-0 pb-7 pt-8 md:px-10 md:pt-10 md:pb-5 mt-3">
         <EmployeeInfo employee={employee} />
         <EmployeeTabs value={value} handleChange={handleChange} />
       </div>

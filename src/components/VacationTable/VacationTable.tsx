@@ -23,44 +23,45 @@ const vacations = [
 ];
 
 interface IVacationTableProps {
-  className: string;
+  className?: string;
 }
 
 const VacationTable: React.FC<IVacationTableProps> = ({ className = "" }) => {
   return (
-    <table className={`w-full ${className}`}>
-      <thead>
-        <tr className="border-b border-mainGray h-[56px] ">
-          <th className="w-[23.5rem] font-normal text-mainGray pl-2" align="left">
-            Тип
-          </th>
-          <th className="w-[23.5rem] font-normal text-mainGray" align="left">
-            Даты отпуска
-          </th>
-          <th className="w-[10rem] font-normal text-mainGray pr-2 whitespace-nowrap" align="left">
-            Количество дней
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {vacations.map((vacation) => {
-          return (
-            <tr key={vacation.id} className="border-b border-mainGray last:border-0 h-[56px] ">
-              <td className="pl-2">{vacation.type}</td>
-              <td className=" h-full">
-                <div className="inline-flex items-center gap-2 whitespace-nowrap">
-                  {vacation.dates.from} <LongArrow color={vacation.used ? "red" : "yellow"} />
-                  {vacation.dates.to}
-                </div>
-              </td>
-              <td className="pr-2" align="right">
-                {vacation.countOfDays}
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+      <table className={`w-full ${className}`}>
+        <thead>
+          <tr className="border-b border-mainGray h-[56px] ">
+            <th className="w-[23.5rem] font-normal text-mainGray pl-2" align="left">
+              Тип
+            </th>
+            <th className="w-[23.5rem] font-normal text-mainGray" align="left">
+              Даты отпуска
+            </th>
+            <th className="w-[10rem] font-normal text-mainGray pr-2 whitespace-nowrap" align="left">
+              Количество дней
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {vacations.map((vacation) => {
+            return (
+              <tr key={vacation.id} className="border-b border-mainGray last:border-0 h-[56px]">
+                <td className="pl-2">{vacation.type}</td>
+                <td className=" h-full">
+                  <div className="inline-flex items-center gap-2 whitespace-nowrap">
+                    {vacation.dates.from} <LongArrow color={vacation.used ? "red" : "yellow"} />
+                    {vacation.dates.to}
+                  </div>
+                </td>
+                <td className="pr-2" align="right">
+                  {vacation.countOfDays}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+   
   );
 };
 

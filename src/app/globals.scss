@@ -23,9 +23,6 @@
   padding: 0px 1rem;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 768px) {
-    padding: 0;
-  }
 }
 
 body {
@@ -34,7 +31,7 @@ body {
 }
 
 h5 {
-  @apply text-2xl;
+  @apply text-base sm:text-2xl;
 }
 
 @layer utilities {
